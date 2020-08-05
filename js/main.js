@@ -17,4 +17,14 @@ $(document).ready(function () {
         $(this).toggleClass("active");
     });
 
+    //slider 
+    $('.siries').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        prevArrow: false,
+      });
+
 });
+
+
