@@ -1,20 +1,11 @@
 $(document).ready(function () {
     // Mobile Menu
-    const mMenuBtn = $(".m-menu-button");
-    const mMenu = $(".m-menu");
-    mMenuBtn.on("click", function(){
-        mMenu.toggleClass("active");
-        $(".support-search-mobile").css("display", "flex");
-        $("body").toggleClass("no-scroll");
-        // scroll-fix for IPhone
-        $(document).on("touchmove",function(event){
-            event.preventDefault();
-          });
-    });
-
-    // Burger Animation
-    $(".m-menu-button").click(function () {
-        $(this).toggleClass("active");
+    const mButton = document.querySelector('.menu-btn');
+    const mMenu = document.querySelector('.header');
+    const mMenuBtn = document.querySelector('.menu-btn');
+    mButton.addEventListener('click', () => {
+        mMenu.classList.toggle('header-active');
+        mMenuBtn.classList.toggle('active');
     });
 
     //slider 
@@ -23,6 +14,17 @@ $(document).ready(function () {
         slidesToShow: 2,
         slidesToScroll: 1,
         prevArrow: false,
+        responsive: [
+            {
+              breakpoint: 400,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false,
+              }
+            },
+        ]
       });
 
 });
