@@ -126,6 +126,8 @@ body {
     border: none;
     cursor: pointer;
     margin-bottom: 85px;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .play {
@@ -137,6 +139,9 @@ body {
     position: relative;
     margin: auto;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .play-img {
@@ -272,6 +277,10 @@ body {
 
 .menu-btn {
     display: none;
+}
+
+.slick-arrow {
+    cursor: pointer;
 }
 
 /* Responsive */ 
